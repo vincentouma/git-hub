@@ -1,0 +1,12 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'bootstrap/base.html' %}
+{% include 'navbar.html'%}
+
+{% block content %}
+<div class="container" style="text-align:center">
+  <div class="well">
+    <hr>
+    {{wtf.quick_form(pitch_form)}}
+ </div>
+</div>
+{% endblock %}
