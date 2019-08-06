@@ -10,11 +10,10 @@
 </div>
 
 <div class="container-fluid">
-        <div class="jumbotron" style= "background: linear-gradient(to bottom, #00ff00 0%, #66ffff 100%);">
-       <img src="{{url_for('static',filename='photos/welcome_1.jpeg')}}" height='200px' width='200px' alt="">
+        <div class="jumbotron">
           
           <!-- <h1 id="title">PITCH </h1> -->
-          <h1 style="font-weight: bold; text-align: center; box-shadow: chartreuse; font-size:80px; ">PITCH</h1>
+          <h1 >PITCH</h1>
           <div id="f1_container">
           <div id="f1_card" class="shadow">
             <div class="front face">
@@ -33,7 +32,7 @@
             <div class="flip-card-front">
               <!-- <p>&#x263A;</p> -->
             </div>
-            <div class="flip-card-back" style= "background: linear-gradient(to bottom, #00ff00 0%, #66ffff 100%);">
+            <div class="flip-card-back">
               <h1 style="font-weight:bold; text-align:center;">Politics</h1> 
               <p style="font-style: italic; font-weight: bold;  text-align:center;" >Most bad government comes from too much government</p> 
             </div>
@@ -44,7 +43,7 @@
               <div class="flip-card-front">
                 <!-- <p>&#x263A;</p> -->
               </div>
-              <div class="flip-card-back" style= "background: linear-gradient(to bottom, #00ff00 0%, #66ffff 100%);">
+              <div class="flip-card-back">
                 <h1 style="font-weight:bold; text-align:center;">Comedy</h1> 
                 <p style="font-style: italic; font-weight: bold; text-align: center; " >A day without laughter is a day wasted</p> 
               </div>
@@ -55,7 +54,7 @@
                 <div class="flip-card-front">
                   <!-- <p>&#x263A;</p> -->
                 </div>
-                <div class="flip-card-back" style= "background: linear-gradient(to bottom, #00ff00 0%, #66ffff 100%);">
+                <div class="flip-card-back">
                   <h1 style="font-weight:bold; text-align:center;">Business</h1> 
                   <p style="font-style: italic; font-weight: bold; text-align:center;" >The best business quality is quality not quantity</p> 
                 </div>
@@ -67,7 +66,7 @@
                     <div class="flip-card-front">
                       <!-- <p>&#x263A;</p> -->
                     </div>
-                    <div class="flip-card-back" style= "background: linear-gradient(to bottom, #00ff00 0%, #66ffff 100%);">
+                    <div class="flip-card-back" >
                       <h1 style="font-weight:bold; text-align:center;">{{pitches.listing}}</h1> 
             <p style="font-style: italic; font-weight: bold; text-align:center;" >
                 {{pitches.actual_pitch}}
@@ -78,13 +77,4 @@
             {% endfor %}
 {% endblock %}
         
-<!-- {% if pitches %}
 
-{{ macro.displayPitches(pitches)}}
-
-{%else%} -->
-<!-- <div class="well">
-  <img src="{{url_for('static',filename='photos/welcome_1.jpeg')}}" height='200px' width='200px' alt="">
-  <h4 style="padding:10%; text-align:center; font-size:50px">PITCHES NOT AVAILABLE</h4>
-</div> -->
-<!-- {% endif %} -->

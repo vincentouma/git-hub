@@ -12,13 +12,12 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("EMAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:vinceobindi1005@localhost/pitch'
 
 
 
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:vinceobindi1005@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:vinceobindi1005@localhost/pitche'
     pass
 
 
@@ -27,6 +26,8 @@ class ProdConfig(Config):
     pass
 
 class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:vinceobindi1005@localhost/pitche'
+
     DEBUG = True
 
 config_options = {
