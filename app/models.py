@@ -8,9 +8,6 @@ from datetime import datetime
 def load_user(user_id):
 	return User.query.get(int(user_id))
 
-
-
-
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
 
@@ -80,6 +77,7 @@ class Pitches(db.Model):
     listing = db.Column(db.String(200))
     comment = db.relationship("Comments", backref="pitches", lazy="dynamic")
 
+
     def save_pitch(self):
         '''
         Function to save a pitch
@@ -100,6 +98,7 @@ class Pitches(db.Model):
         return pitches
 
 
+
 class Comments(db.Model):
     '''
     Comment class that creates instances of Comments class that will be attached to a particular pitch
@@ -113,6 +112,7 @@ class Comments(db.Model):
     date_posted = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     pitches_id = db.Column(db.Integer, db.ForeignKey("pitches.id"))
+
 
     def save_comment(self):
         '''
