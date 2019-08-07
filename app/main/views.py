@@ -50,6 +50,7 @@ def new_listing():
 	title = 'New Pitch Listing'
 	return render_template('new_listing.html',listing_form=form)
 
+
 @main.route('/listing/<int:id>')
 def listing(id):
     '''
@@ -63,6 +64,7 @@ def listing(id):
     # pitches = Pitches.get_pitches(id)
     return redirect (url_for('main.index'))
     return render_template('listing.html', listing=listing, )
+
 
 
 @main.route('/comment',methods = ['GET','POST'])
@@ -80,7 +82,6 @@ def comment():
         db.session.add(new_comment)
         db.session.commit()
     return render_template('comment.html', comments=comments , form = form)
-
 
 @main.route('/pitch/<int:id>', methods=['GET', 'POST'])
 @login_required
