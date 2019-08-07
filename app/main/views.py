@@ -97,8 +97,7 @@ def single_pitch(id):
         pitchess.save_pitch()
         return redirect(url_for('listing'))
 
-    # if pitches is None:
-    #     abort(404)
+
 
     comment = Comments.get_comments(id)
     return redirect (url_for('main.index'))
